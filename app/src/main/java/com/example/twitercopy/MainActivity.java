@@ -1,10 +1,10 @@
 package com.example.twitercopy;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 
@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(new ProductList(R.drawable.smart_watch,"Apple Smart Watch","Apple","₹ 45000/-"));
         arrayList.add(new ProductList(R.drawable.spoons,"Cattery Spoons","Spoons","₹ 4000/-"));
 
+
         recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
         adapter = new ProductAdapter(arrayList);
         layoutManager = new LinearLayoutManager(this);
 
